@@ -20,3 +20,9 @@
    4.1 参数绑定：PDO会自动的参数进行语法转义，合法的所传的参数拼接到SQL中，例如参数为字符会自动+''
    
    4.2 预编译：数据库支持+驱动支持 【避免重复分析/编译/优化周期】
+
+5. 相关博文:  https://blog.csdn.net/zuiliannvshen/article/details/78247244
+
+6. 注入漏洞防范方法：禁止PHP代替Mysql来模拟prepare,这样SQL的拼接工作就是由数据库端完成的，
+   mysql Server指定字符集，并将变量发送给MySQL Server完成根据字符转义
+
