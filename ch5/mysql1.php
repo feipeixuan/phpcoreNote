@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User: changba-176
+ * Date: 2018/12/4
+ * Time: 下午6:29
+ */
 //1 执行一条使用命名占位符的预处理语句
 
 /* 通过绑定的 PHP 变量执行一条预处理语句 */
@@ -23,7 +28,9 @@ $sth = $dbh->prepare('SELECT name, colour, calories
 $sth->bindValue(1, $calories, PDO::PARAM_INT);
 $sth->bindValue(2, $colour, PDO::PARAM_STR);
 $sth->execute();
-=======
+
+
+# 完整版本
 $dbms='mysql';     //数据库类型
 $host='localhost'; //数据库主机名
 $dbName='test';    //使用的数据库
@@ -45,4 +52,4 @@ try {
 } catch (PDOException $e) {
     die ("Error!: " . $e->getMessage() . "<br/>");
 }
->>>>>>> 5bab8bd982136d874bfc04ed250d7abd38cf3686
+
