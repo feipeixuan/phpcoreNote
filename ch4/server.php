@@ -10,10 +10,12 @@ set_time_limit(0);
 
 //创建socket AF为协议族 TYPE为TCP
 $socket=socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
-//绑定socket到指定ip和端口
+//绑定socket到指定ip和端口,该操作必须是在使用 socket_connect() 或者 socket_listen() 建立一个连接之前。
 $ret = socket_bind($socket, $ip, $port);
 //监听socket,最大等会数为4
 $ret = socket_listen($socket, 4);
+//设置为非阻塞模式
+socket_set_block($socket);
 //计数
 $count = 0;
 echo "等待连接!!!\r\n";

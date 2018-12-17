@@ -7,7 +7,10 @@ $port = 1935;
 //超时设计
 set_time_limit(0);
 
-//创建socket AF为协议族 TYPE为TCP
+//创建socket AF为协议族[IPV4\IPV6] TYPE为TCP
 $socket=socket_create(AF_INET,SOCK_STREAM,0);
-$result=socket_connect($socket,$ip,$port);
+$result=socket_connect($socket,$ip,$port);//用 socket_create() 创建的有效的套接字资源来连接到 address
+if($result==false){
+    echo "连接失败";
+}
 socket_write($socket,"jb是狗");
