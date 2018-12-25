@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf8"?>
+<!--*为必填 #为可选 -->
+<labels>
+    <label>
+        <name>if</name>
+        <expression>*</expression>
+    </label>
+    <label>
+        <name>foreach</name>
+        <values>*</values>
+        <key>#</key>
+        <value>*</value>
+    </label>
+    <label>
+        <name>for</name>
+        <values>*</values>
+        <index>*</index>
+    </label>
+</labels>
