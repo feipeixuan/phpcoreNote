@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__."/Autoloader/Autoloader.php";
+
 class Config{
 
     public static $_instance = null;
@@ -17,5 +19,6 @@ class Config{
         }
         return self::$_instance;
     }
-
 }
+
+Autoloader::autoload();

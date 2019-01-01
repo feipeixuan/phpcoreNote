@@ -1,10 +1,18 @@
 <?php
 
-
+// 基本类
 class Controller
 {
     // 值栈
     private $value;
+
+    // 编译类
+    private $compiler;
+
+    public function __construct()
+    {
+        $this->compiler = DefaultCompiler::getInstance();
+    }
 
     // 注入单个变量
     public function assign($key, $value)
@@ -24,8 +32,6 @@ class Controller
 
     public function getView()
     {
-       $compiler="";
-       $compiler->complie();
+        $this->compiler->complie();
     }
-
 }

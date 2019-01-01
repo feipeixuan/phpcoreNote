@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf8"?>
 <!--*为必填 #为可选 -->
-<labels>
+<config>
     <label>
         <name>if</name>
         <expression>*</expression>
@@ -16,4 +16,9 @@
         <values>*</values>
         <index>*</index>
     </label>
-</labels>
+    <label>
+        <name>print</name>
+        <value>*</value>
+        <type>single</type>
+    </label>
+</config>

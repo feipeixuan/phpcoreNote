@@ -2,17 +2,16 @@
 
 class Label
 {
-    private $labelName;
+    public $labelName;
 
-    private $keywords = array();
+    public $keywords = array();
 
-    private static $TYPE_OPTION = 1;
+    public static $TYPE_OPTION = 1;
 
-    private static $TYPE_MUST = 0;
+    public static $TYPE_MUST = 0;
 
     function __construct($label)
     {
-        $label=(array)($label);
         $this->labelName = $label['name'];
         foreach ($label as $key => $value) {
             if ($key == "name") {
@@ -24,6 +23,11 @@ class Label
                     $this->assignKeyword($key, Label::$TYPE_OPTION);
                 }
             }
+        }
+        if(array_key_exists('type',$label)){
+            $this->assignKeyword("type",$label["type"]);
+        }else{
+            $this->assignKeyword("type","double");
         }
     }
 
