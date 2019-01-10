@@ -34,4 +34,8 @@ class Controller
     {
         $this->compiler->complie();
     }
+
+    public function execute(){
+        
+    }
 }

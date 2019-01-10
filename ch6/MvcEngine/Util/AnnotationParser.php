@@ -22,7 +22,7 @@ class AnnotationParser
         $subStrs = explode(",", $content);
         foreach ($subStrs as $subStr) {
             preg_match_all("/$keyword\s*=\s*\"(\S*)\"\s*/", $subStr, $matchs);
-            if (count($matchs >= 0) and count($matchs[1][0]) != 0)
+            if (count($matchs) > 0 and count($matchs[1]) != 0)
                 return $matchs[1][0];
         }
         return false;
